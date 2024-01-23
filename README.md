@@ -58,6 +58,10 @@
 
 2. **執行 Prisma 遷移**
 
+    ```
+    可以透過prisma連接上主機的docker mysql container來運行～～
+    ```
+
     ```bash
     DATABASE_URL="mysql://username:password@localhost:3306/database_name"
     ```
@@ -65,14 +69,15 @@
     ```bash
     npx prisma migrate dev
     ```
+    
 
-3. **執行應用程式**
+4. **執行應用程式**
 
     ```bash
     npm start
     ```
 
-4. **存取應用程式**
+5. **存取應用程式**
 
 ## 專案結構
 
