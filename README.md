@@ -46,3 +46,50 @@
 
 5. **狀態 (Status)**
    - 任務的當前狀態
+
+
+## 前置作業
+
+1. **安裝相依套件**
+
+    ```bash
+    npm install
+    ```
+
+2. **執行 Prisma 遷移**
+
+    ```bash
+    DATABASE_URL="mysql://username:password@localhost:3306/database_name"
+    ```
+
+    ```bash
+    npx prisma migrate dev
+    ```
+
+3. **執行應用程式**
+
+    ```bash
+    npm start
+    ```
+
+4. **存取應用程式**
+
+## 專案結構
+
+```plaintext
+.
+├── README.md
+├── node_modules
+├── package.json
+├── src
+│   ├── app.ts
+│   └── ...
+├── views
+│   ├── tasks
+│   │   └── index.ejs
+│   └── ...
+├── dist
+├── package-lock.json
+├── prisma
+│   └── schema.prisma
+└── tsconfig.json
