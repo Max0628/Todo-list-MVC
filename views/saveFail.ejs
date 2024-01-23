@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新增任務失敗</title>
+  </head>
+  <body>
+    <h2>無法新增任務</h2>
+    <%= '錯誤訊息:'+error %>
+    <a href="/task">返回主畫面</a>
+  </body>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      max-width: 550px;
+      margin: 30px auto;
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* 增加分隔線 */
+    tr {
+      border-bottom: 1px solid #45a049;
+    }
+
+    /* 設定配色 */
+    h2 {
+      color: #45a049;
+    }
+
+    table {
+      background-color: #fff;
+    }
+
+    th,
+    td {
+      color: #45a049;
+    }
+  </style>
+</html>

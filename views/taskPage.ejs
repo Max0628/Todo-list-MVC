@@ -1,0 +1,81 @@
+<!-- task_page.ejs -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= getTask.title %>任務的頁面</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>任務ID</td>
+        <td><%= getTask.id %></td>
+      </tr>
+      <tr>
+        <td>任務名稱</td>
+        <td><%= getTask.title %></td>
+      </tr>
+      <tr>
+        <td>任務內容</td>
+        <td><%= getTask.description %></td>
+      </tr>
+      <tr>
+        <td>完成期限</td>
+        <td><%= getTask.due_date %></td>
+      </tr>
+      <tr>
+        <td>狀態</td>
+        <td><%= getTask.status %></td>
+      </tr>
+    </table>
+    <a href="/task/<%= getTask.id %>/delete">刪除此任務</a>
+    <a href="/task/<%= getTask.id  %>/edit">編輯任務</a>
+    <a href="/task">回到首頁</a>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        max-width: 550px;
+        margin: 30px auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 90%;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+      }
+
+      tr {
+        border-bottom: 1px solid #45a049;
+      }
+
+      h2 {
+        color: #45a049;
+      }
+
+      table {
+        background-color: #fff;
+      }
+
+      th,
+      td {
+        color: #45a049;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <a href="/task/new">新增任務</a>
+    <ul>
+      <% getAllTasks.forEach(task => { %>
+      <li><a href="/task/<%= task.id %>"><%= task.title %></a></li>
+      <% }); %>
+    </ul>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      a {
+        display: block;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+
+      a:hover {
+        background-color: #4caf50;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-top: 10px;
+      }
+
+      li a {
+        text-decoration: none;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        display: block;
+      }
+
+      li a:hover {
+        background-color: #f5f5f5;
+      }
+    </style>
+  </body>
+</html>

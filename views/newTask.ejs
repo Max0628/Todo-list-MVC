@@ -1,0 +1,88 @@
+<!-- views/newTaskForm -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新增任務</title>
+  </head>
+  <body>
+    <h2>請輸入任務</h2>
+    <form action="/task" method="post">
+      <label for="id">ID</label>
+      <input type="number" name="id" />
+
+      <label for="title">標題</label>
+      <input type="text" name="title" />
+
+      <label for="description">內容</label>
+      <input type="text" name="description" />
+
+      <label for="due_date">完成期限</label>
+      <input type="date" name="due_date" />
+
+      <label for="status">狀態</label>
+      <select name="status">
+        <option value="pending">待處理</option>
+        <option value="in-progress">進行中</option>
+        <option value="completed">已完成</option>
+      </select>
+
+      <button>新增任務</button>
+    </form>
+    <a href="/task">返回主頁</a>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-top: 10px;
+      }
+
+      input {
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      a {
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #4caf50;
+      }
+    </style>
+  </body>
+</html>

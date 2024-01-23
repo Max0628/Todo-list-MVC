@@ -1,0 +1,39 @@
+<!-- views/editTask.ejs -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>編輯任務</title>
+  </head>
+  <body>
+    <h2>請編輯任務</h2>
+    <form action="/task/<%= getTask.id %>?_method=put" method="post">
+      <label for="id">ID</label>
+      <input type="number" name="id" value="<%= getTask.id %>" />
+
+      <label for="title">標題</label>
+      <input type="text" name="title" value="<%= getTask.title %>" />
+
+      <label for="description">內容</label>
+      <input
+        type="text"
+        name="description"
+        value="<%= getTask.description %>"
+      />
+
+      <label for="due_date">完成期限</label>
+      <input type="date" name="due_date" value="<%= getTask.due_date %>" />
+
+      <label for="status">狀態</label>
+      <select name="status">
+        <option value="pending">待處理</option>
+        <option value="in-progress">進行中</option>
+        <option value="completed">已完成</option>
+      </select>
+
+      <button>編輯任務</button>
+    </form>
+    <a href="/task">返回主頁</a>
+  </body>
+</html>

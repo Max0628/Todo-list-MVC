@@ -1,0 +1,35 @@
+<!-- 新增任務成功畫面 -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>編輯任務結果</title>
+  </head>
+  <body>
+    <h1>成功編輯資料</h1>
+    <table>
+      <tr>
+        <td>任務ID</td>
+        <td><%= putTask.id %></td>
+      </tr>
+      <tr>
+        <td>任務名稱</td>
+        <td><%= putTask.title %></td>
+      </tr>
+      <tr>
+        <td>任務內容</td>
+        <td><%= putTask.description %></td>
+      </tr>
+      <tr>
+        <td>完成期限</td>
+        <td><%= putTask.due_date %></td>
+      </tr>
+      <tr>
+        <td>任務狀態</td>
+        <td><%= putTask.status %></td>
+      </tr>
+    </table>
+    <a href="/task">回到主畫面</a>
+  </body>
+</html>
